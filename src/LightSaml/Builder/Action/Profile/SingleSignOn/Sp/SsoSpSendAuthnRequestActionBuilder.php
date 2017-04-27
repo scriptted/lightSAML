@@ -42,6 +42,10 @@ class SsoSpSendAuthnRequestActionBuilder extends AbstractProfileActionBuilder
         $this->add(new CreateAuthnRequestAction(
             $this->buildContainer->getSystemContainer()->getLogger()
         ));
+        $this->add(new ACSUrlAction(
+            $this->buildContainer->getSystemContainer()->getLogger(),
+            $this->buildContainer->getServiceContainer()->getEndpointResolver()
+        ));
         $this->add(new SetRelayStateAction(
             $this->buildContainer->getSystemContainer()->getLogger()
         ));
