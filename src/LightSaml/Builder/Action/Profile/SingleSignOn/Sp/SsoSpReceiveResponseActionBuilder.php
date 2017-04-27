@@ -31,6 +31,7 @@ use LightSaml\Build\Container\BuildContainerInterface;
 use LightSaml\Builder\Action\ActionBuilderInterface;
 use LightSaml\Builder\Action\Profile\AbstractProfileActionBuilder;
 use LightSaml\SamlConstants;
+use LightSaml\Action\Profile\Outbound\AuthnRequest\ACSUrlAction;
 
 class SsoSpReceiveResponseActionBuilder extends AbstractProfileActionBuilder
 {
