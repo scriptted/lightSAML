@@ -80,7 +80,7 @@ class OwnSignatureResolver implements SignatureResolverInterface
         ;
         $query->resolve();
 
-        $result = $query->firstCredential();
+        $result = $query->allCredentials()[1];
         if ($result && false === $result instanceof X509CredentialInterface) {
             throw new \LogicException(sprintf('Expected X509CredentialInterface but got %s', get_class($result)));
         }
